@@ -1,3 +1,46 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(-20deg); /* Initial position and tilt angle */
+  }
+  50% {
+    transform: translateY(-20px) rotate(-20deg); /* Floating up position */
+  }
+}
+
+@keyframes float2 {
+  0%, 100% {
+    transform: translateY(0) rotate(20deg); /* Initial position and tilt angle */
+  }
+  50% {
+    transform: translateY(-20px) rotate(20deg); /* Floating up position */
+  }
+}
+
+.tilted-image-container-1 {
+    top: 20%;
+    left: 10%;
+    width: 200px; /* Adjust the size as needed */
+    height: 200px; /* Adjust the size as needed */
+    transform: rotate(-20deg); /* Adjust the tilt angle as needed */
+    z-index: 0;
+    animation: float 3s ease-in-out infinite; /* Apply floating animation */
+}
+
+.tilted-image-container-2 {
+    top: 20%;
+    left: 10%;
+    width: 200px; /* Adjust the size as needed */
+    height: 200px; /* Adjust the size as needed */
+    transform: rotate(20deg); /* Adjust the tilt angle as needed */
+    z-index: 0;
+    animation: float2 3s ease-in-out infinite; /* Apply floating animation */
+}
+
+.tilted-image {
+    width: 100%;
+    height: 100%;
+}
