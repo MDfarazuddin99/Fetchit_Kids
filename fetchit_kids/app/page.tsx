@@ -4,7 +4,7 @@ import avatar1 from "../public/av1.png";
 import avatar2 from "../public/av2.png";
 import avatar3 from "../public/av3.png";
 import star from "../public/star.png";
-
+import fetchit_logo from  "../public/fetchit.png"
 const nunito = Nunito({
   weight: "400",
   subsets: ["latin"],
@@ -13,7 +13,7 @@ const nunito = Nunito({
 export default function Home() {
   return (
     <main
-      className={`${nunito.className} bg-[#fefcf7] min-h-screen flex flex-col items-center pt-[1%]`}
+      className={`${nunito.className} relative bg-[#fefcf7] min-h-screen flex flex-col items-center `}
     >
       <div className="flex flex-row items-center w-[100%] justify-between px-[5%]">
         <div className="tilted-image-container-1">
@@ -26,7 +26,7 @@ export default function Home() {
           />
         </div>
         <div className="inline-block rounded-full text-white bg-[#818cf8] p-5">
-          <p className="font-extrabold text-5xl">
+          <p className="font-extrabold text-3xl">
             Learn Something New Everyday
           </p>
         </div>
@@ -41,20 +41,16 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="inline-block rounded-full text-white bg-[#b45309] p-5 ml-[50%]">
-        <p className="font-extrabold text-5xl">Grow Everyday</p>
+      <div className="inline-block rounded-full text-white bg-[#4ade80] p-5 mb-4">
+        <p className="font-extrabold text-3xl">Meet your guides</p>
       </div>
 
-      <div className="inline-block rounded-full text-white bg-[#4ade80] p-5 mr-[60%]">
-        <p className="font-extrabold text-5xl">Meet your guides</p>
-      </div>
-
-      <div className="flex justify-center space-x-40 w-[70%]">
+      <div className="flex justify-center space-x-40 w-[70%] ">
         <div className="">
           <div className="bg-[#b45309] w-[300px] h-[300px] rounded-full transition-transform transform hover:scale-110">
             <Image src={avatar1} alt="Description of the image"></Image>
           </div>
-          <div className="flex items-center justify-center text-4xl font-extrabold">
+          <div className="flex items-center justify-center text-4xl font-extrabold bg-[#b45309] rounded-full mt-2">
             Ross
           </div>
         </div>
@@ -62,7 +58,7 @@ export default function Home() {
           <div className="bg-[#4ade80] w-[300px] h-[300px] rounded-full transition-transform transform hover:scale-110">
             <Image src={avatar2} alt="Description of the image"></Image>
           </div>
-          <div className="flex items-center justify-center text-4xl font-extrabold">
+          <div className="flex items-center justify-center text-4xl font-extrabold bg-[#4ade80] rounded-full mt-2">
             Joey
           </div>
         </div>
@@ -70,11 +66,53 @@ export default function Home() {
           <div className="bg-[#818cf8] w-[300px] h-[300px] rounded-full transition-transform transform hover:scale-110">
             <Image src={avatar3} alt="Description of the image"></Image>
           </div>
-          <div className="flex items-center justify-center text-4xl font-extrabold">
+          <div className="flex items-center justify-center text-4xl font-extrabold bg-[#818cf8] rounded-full mt-2">
             Chandler
           </div>
         </div>
       </div>
+      <footer className="bg-[#fefcf7] absolute bottom-0 shadow w-[100%] border-2 border-t-[#3E4EA1] ">
+        <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+          <div className="sm:flex sm:items-center sm:justify-between">
+          <div className="flex items-center">
+          <Image src={fetchit_logo} alt="Fetchit logo" width={50} height={50} />
+          <span className="mt-[15px] font-inter font-bold text-[#3E4EA1] ml-1 text-[37px] leading-[50px] tracking-wider">
+            Fetchit
+          </span>
+        </div>
+            <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 ">
+              <li>
+                <a href="#" className="hover:underline me-4 md:me-6">
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline me-4 md:me-6">
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline me-4 md:me-6">
+                  Licensing
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+          <hr className="my-6 border-[#3E4EA1] sm:mx-auto  lg:my-8" />
+          <span className="block text-sm text-gray-500 sm:text-center ">
+            © 2023{" "}
+            <a href="https://flowbite.com/" className="hover:underline">
+              Fetchit
+            </a>
+            . All Rights Reserved.
+          </span>
+        </div>
+      </footer>
     </main>
   );
 }
