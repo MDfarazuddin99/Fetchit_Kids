@@ -56,6 +56,14 @@
   --px: 4px;
 }
 
+.character{
+  transition: transform 1s;
+}
+
+.character:hover{
+  transform: rotate(1080deg);
+}
+
 .bubble {
   position: absolute;
   display: inline-block;

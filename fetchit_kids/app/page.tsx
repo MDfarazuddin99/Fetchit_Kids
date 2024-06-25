@@ -68,8 +68,8 @@ export default function Home() {
             >
               Hello! I&apos;m Ross
             </div>
-            <div className="bg-[#b45309] w-[300px] h-[300px] rounded-full transition-transform transform hover:scale-110">
-              <Image src={avatar1} alt="Description of the image"></Image>
+            <div className=" bg-[#b45309] w-[300px] h-[300px] rounded-full transition-transform transform hover:rotate-180 hover:scale-110">
+              <Image className="hover:-rotate-180" src={avatar1} alt="Description of the image"></Image>
             </div>
             <div className="flex items-center justify-center text-2xl font-extrabold mt-2">
               <button className="flex items-center justify-center text-2xl font-extrabold bg-[#b45309] rounded-full mt-2 p-2 text-white">
@@ -83,8 +83,8 @@ export default function Home() {
             >
               Hello! I&apos;m Joey
             </div>
-            <div className="flex bg-[#4ade80] w-[300px] h-[300px] rounded-full transition-transform transform hover:scale-110">
-              <Image src={avatar2} alt="Description of the image"></Image>
+            <div className="flex bg-[#4ade80] w-[300px] h-[300px] rounded-full transition-transform transform hover:rotate-180 hover:scale-110">
+              <Image className ="hover:-rotate-180" src={avatar2} alt="Description of the image"></Image>
             </div>
             <div className="flex items-center justify-center text-2xl font-extrabold mt-2">
               <button className="flex items-center justify-center text-2xl font-extrabold bg-[#4ade80] rounded-full mt-2 p-2 text-white">
@@ -98,8 +98,8 @@ export default function Home() {
             >
               Hello! I&apos;m Chandler
             </div>
-            <div className="bg-[#818cf8] w-[300px] h-[300px] rounded-full transition-transform transform hover:scale-110">
-              <Image src={avatar3} alt="Description of the image"></Image>
+            <div className="bg-[#818cf8] w-[300px] h-[300px] rounded-full transition-transform transform hover:rotate-180 hover:scale-110">
+              <Image className ="hover:-rotate-180" src={avatar3} alt="Description of the image"></Image>
             </div>
             <div className="flex items-center justify-center text-2xl font-extrabold mt-2">
               <button className="flex items-center justify-center text-2xl font-extrabold bg-[#818cf8] rounded-full mt-2 p-2 text-white">
