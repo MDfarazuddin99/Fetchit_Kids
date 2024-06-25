@@ -19,11 +19,13 @@ const p2p = Press_Start_2P({
 export default function Home() {
   return (
     <main
-      className={`${nunito.className} bg-[#fefcf7] flex flex-col items-center justify-between`}
+      className={`${nunito.className} bg-[#00b0ffb3] flex flex-col items-center justify-between`}
     >
       {/* body */}
-      <div className="flex flex-col w-[100%] items-center justify-center h-[100vh] pb-[15%]">
-        <div className="flex flex-row items-center w-[100%] justify-between px-[5%]">
+      <div className="flex flex-col w-[100%] items-center justify-center h-[100vh] pb-[5%]">
+        <div className="flex flex-row items-center w-[100%] justify-between px-[3%]">
+          <div id="cloud"></div>
+
           <div className="tilted-image-container-1">
             <Image
               src={star}
@@ -47,13 +49,18 @@ export default function Home() {
               className="tilted-image"
             />
           </div>
+          <div id="cloud"></div>
+        </div>
+        <div className="flex flex-row items-center w-[100%] justify-between px-[10%]">
+          <div id="cloud"></div>
+          <div className="inline-block rounded-full text-white bg-[#4ade80] p-5 mb-4">
+            <p className="font-extrabold text-3xl">Meet your guides</p>
+          </div>
+
+          <div id="cloud"></div>
         </div>
 
-        <div className="inline-block rounded-full text-white bg-[#4ade80] p-5 mb-4">
-          <p className="font-extrabold text-3xl">Meet your guides</p>
-        </div>
-
-        <div className="flex justify-center space-x-40 w-[70%]">
+        <div className="flex justify-center space-x-40 w-[70%] mt-[10px]">
           <div className="">
             <div
               className={`Press_Start_2P bubble shadow mini bottom ${p2p.className}`}
@@ -101,6 +108,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       {/* footer element */}
       <footer className="bg-red-100 w-[100%]">
         <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
