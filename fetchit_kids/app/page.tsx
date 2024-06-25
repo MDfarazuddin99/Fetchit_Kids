@@ -23,7 +23,7 @@ export default function Home() {
       className={`${nunito.className} SkyToNight flex flex-col items-center justify-between`}
     >
       {/* body */}
-      <div className="flex flex-col w-[100%] items-center justify-center h-[100vh] pb-auto">
+      <div className="flex flex-col w-[100%] items-center justify-center h-[100vh] py-auto">
         <div className="flex flex-row items-center w-[100%] justify-between px-[3%]">
           <div id="cloud"></div>
 
