@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { Nunito, Press_Start_2P } from "next/font/google";
 import avatar1 from "../public/av1.png";
@@ -6,7 +7,7 @@ import avatar3 from "../public/av3.png";
 import sun from "../public/sun.png";
 import moon from "../public/moon.png";
 import fetchit_logo from "../public/fetchit.png";
-
+import { Typewriter } from "nextjs-simple-typewriter";
 const nunito = Nunito({
   weight: "400",
   subsets: ["latin"],
@@ -18,6 +19,14 @@ const p2p = Press_Start_2P({
 });
 
 export default function Home() {
+  const handleType = (count: number) => {
+    // access word count number
+    console.log(count);
+  };
+
+  const handleDone = () => {
+    console.log(`Done after 5 loops!`);
+  };
   return (
     <main
       className={`${nunito.className} SkyToNight flex flex-col items-center justify-between`}
@@ -66,10 +75,24 @@ export default function Home() {
             <div
               className={`Press_Start_2P bubble shadow mini bottom ${p2p.className}`}
             >
-              Hello! I&apos;m Ross
+              <Typewriter
+                words={["Hello! I am Ross"]}
+                loop={2}
+                // cursor
+                // cursorStyle=""
+                typeSpeed={80}
+                deleteSpeed={80}
+                delaySpeed={2500}
+                onLoopDone={handleDone}
+                onType={handleType}
+              />
             </div>
             <div className=" bg-[#b45309] w-[300px] h-[300px] rounded-full transition-transform transform hover:rotate-180 hover:scale-125">
-              <Image className="hover:-rotate-180" src={avatar1} alt="Description of the image"></Image>
+              <Image
+                className="hover:-rotate-180"
+                src={avatar1}
+                alt="Description of the image"
+              ></Image>
             </div>
             <div className="flex items-center justify-center text-2xl font-extrabold mt-2">
               <button className="flex items-center justify-center text-2xl font-extrabold bg-[#b45309] rounded-full mt-2 p-2 text-white">
@@ -81,10 +104,24 @@ export default function Home() {
             <div
               className={`Press_Start_2P bubble shadow mini bottom ${p2p.className}`}
             >
-              Hello! I&apos;m Joey
+              <Typewriter
+                words={["Hello! I am Joey"]}
+                loop={2}
+                // cursor
+                // cursorStyle=""
+                typeSpeed={80}
+                deleteSpeed={80}
+                delaySpeed={2500}
+                onLoopDone={handleDone}
+                onType={handleType}
+              />
             </div>
             <div className="flex bg-[#4ade80] w-[300px] h-[300px] rounded-full transition-transform transform hover:rotate-180 hover:scale-125">
-              <Image className ="hover:-rotate-180" src={avatar2} alt="Description of the image"></Image>
+              <Image
+                className="hover:-rotate-180"
+                src={avatar2}
+                alt="Description of the image"
+              ></Image>
             </div>
             <div className="flex items-center justify-center text-2xl font-extrabold mt-2">
               <button className="flex items-center justify-center text-2xl font-extrabold bg-[#4ade80] rounded-full mt-2 p-2 text-white">
@@ -94,12 +131,26 @@ export default function Home() {
           </div>
           <div className="">
             <div
-              className={`Press_Start_2P bubble shadow mini bottom ${p2p.className}`}
+              className={`Press_Start_2P bubble shadow mini bottom ${p2p.className} `}
             >
-              Hello! I&apos;m Chandler
+              <Typewriter
+                words={["Hello! I am Chandler"]}
+                loop={2}
+                // cursor
+                // cursorStyle=""
+                typeSpeed={80}
+                deleteSpeed={80}
+                delaySpeed={2500}
+                onLoopDone={handleDone}
+                onType={handleType}
+              />
             </div>
             <div className="bg-[#818cf8] w-[300px] h-[300px] rounded-full transition-transform transform hover:rotate-180 hover:scale-125">
-              <Image className ="hover:-rotate-180" src={avatar3} alt="Description of the image"></Image>
+              <Image
+                className="hover:-rotate-180"
+                src={avatar3}
+                alt="Description of the image"
+              ></Image>
             </div>
             <div className="flex items-center justify-center text-2xl font-extrabold mt-2">
               <button className="flex items-center justify-center text-2xl font-extrabold bg-[#818cf8] rounded-full mt-2 p-2 text-white">
