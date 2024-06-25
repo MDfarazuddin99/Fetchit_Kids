@@ -58,7 +58,7 @@ export default function Home() {
             <div
               className={`Press_Start_2P bubble shadow mini bottom ${p2p.className}`}
             >
-              Hello! I'm Ross
+              Hello! I&apos;m Ross
             </div>
             <div className="bg-[#b45309] w-[300px] h-[300px] rounded-full transition-transform transform hover:scale-110">
               <Image src={avatar1} alt="Description of the image"></Image>
@@ -73,7 +73,7 @@ export default function Home() {
             <div
               className={`Press_Start_2P bubble shadow mini bottom ${p2p.className}`}
             >
-              Hello! I'm Joey
+              Hello! I&apos;m Joey
             </div>
             <div className="flex bg-[#4ade80] w-[300px] h-[300px] rounded-full transition-transform transform hover:scale-110">
               <Image src={avatar2} alt="Description of the image"></Image>
@@ -88,7 +88,7 @@ export default function Home() {
             <div
               className={`Press_Start_2P bubble shadow mini bottom ${p2p.className}`}
             >
-              Hello! I'm Chandler
+              Hello! I&apos;m Chandler
             </div>
             <div className="bg-[#818cf8] w-[300px] h-[300px] rounded-full transition-transform transform hover:scale-110">
               <Image src={avatar3} alt="Description of the image"></Image>
