@@ -68,7 +68,7 @@ export default function Home() {
             >
               Hello! I&apos;m Ross
             </div>
-            <div className=" bg-[#b45309] w-[300px] h-[300px] rounded-full transition-transform transform hover:rotate-180 hover:scale-110">
+            <div className=" bg-[#b45309] w-[300px] h-[300px] rounded-full transition-transform transform hover:rotate-180 hover:scale-125">
               <Image className="hover:-rotate-180" src={avatar1} alt="Description of the image"></Image>
             </div>
             <div className="flex items-center justify-center text-2xl font-extrabold mt-2">
@@ -83,7 +83,7 @@ export default function Home() {
             >
               Hello! I&apos;m Joey
             </div>
-            <div className="flex bg-[#4ade80] w-[300px] h-[300px] rounded-full transition-transform transform hover:rotate-180 hover:scale-110">
+            <div className="flex bg-[#4ade80] w-[300px] h-[300px] rounded-full transition-transform transform hover:rotate-180 hover:scale-125">
               <Image className ="hover:-rotate-180" src={avatar2} alt="Description of the image"></Image>
             </div>
             <div className="flex items-center justify-center text-2xl font-extrabold mt-2">
@@ -98,7 +98,7 @@ export default function Home() {
             >
               Hello! I&apos;m Chandler
             </div>
-            <div className="bg-[#818cf8] w-[300px] h-[300px] rounded-full transition-transform transform hover:rotate-180 hover:scale-110">
+            <div className="bg-[#818cf8] w-[300px] h-[300px] rounded-full transition-transform transform hover:rotate-180 hover:scale-125">
               <Image className ="hover:-rotate-180" src={avatar3} alt="Description of the image"></Image>
             </div>
             <div className="flex items-center justify-center text-2xl font-extrabold mt-2">
