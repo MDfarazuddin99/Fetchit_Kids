@@ -3,7 +3,8 @@ import { Nunito, Press_Start_2P } from "next/font/google";
 import avatar1 from "../public/av1.png";
 import avatar2 from "../public/av2.png";
 import avatar3 from "../public/av3.png";
-import star from "../public/star.png";
+import sun from "../public/sun.png";
+import moon from "../public/moon.png";
 import fetchit_logo from "../public/fetchit.png";
 
 const nunito = Nunito({
@@ -19,16 +20,16 @@ const p2p = Press_Start_2P({
 export default function Home() {
   return (
     <main
-      className={`${nunito.className} bg-[#00b0ffb3] flex flex-col items-center justify-between`}
+      className={`${nunito.className} SkyToNight flex flex-col items-center justify-between`}
     >
       {/* body */}
-      <div className="flex flex-col w-[100%] items-center justify-center h-[100vh] pb-[5%]">
+      <div className="flex flex-col w-[100%] items-center justify-center h-[100vh] pb-[10%]">
         <div className="flex flex-row items-center w-[100%] justify-between px-[3%]">
           <div id="cloud"></div>
 
           <div className="tilted-image-container-1">
             <Image
-              src={star}
+              src={sun}
               alt="Tilted Star"
               layout="fill"
               objectFit="contain"
@@ -42,7 +43,7 @@ export default function Home() {
           </div>
           <div className="tilted-image-container-2">
             <Image
-              src={star}
+              src={moon}
               alt="Tilted Star"
               layout="fill"
               objectFit="contain"
@@ -51,13 +52,13 @@ export default function Home() {
           </div>
           <div id="cloud"></div>
         </div>
-        <div className="flex flex-row items-center w-[100%] justify-between px-[10%]">
-          <div id="cloud"></div>
-          <div className="inline-block rounded-full text-white bg-[#4ade80] p-5 mb-4">
+        <div className="flex flex-row items-center w-[100%] ">
+          {/* <div id="cloud"></div> */}
+          <div className="inline-block rounded-full text-white bg-[#4ade80] p-5 mb-4 mx-auto">
             <p className="font-extrabold text-3xl">Meet your guides</p>
           </div>
 
-          <div id="cloud"></div>
+          {/* <div id="cloud"></div> */}
         </div>
 
         <div className="flex justify-center space-x-40 w-[70%] mt-[10px]">
