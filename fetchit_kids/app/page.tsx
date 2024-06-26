@@ -197,7 +197,8 @@ export default function Home() {
             <p className="font-extrabold text-1xl">Meet your Guides</p>
           </div>
         </div>
-        <div className="flex flex-col justify-center items-center w-[100%] mb-[100px]">
+
+        <div className="flex flex-row justify-center items-center w-[100%] justify-between px-[5%]">
           <div className="">
             <div
               className={`Press_Start_2P bubble shadow mini bottom ${p2p.className}`}
@@ -221,11 +222,11 @@ export default function Home() {
                 alt="Description of the image"
               ></Image>
             </div>
-            {/* <div className="flex items-center justify-center text-1xl font-extrabold mt-2">
-              <button className="flex items-center justify-center text-1xl font-extrabold bg-[#b45309] rounded-full mt-2 p-2 text-white">
+            <div className="flex items-center justify-center text-base font-extrabold mt-2">
+              <button className="flex items-center justify-center text-base font-extrabold bg-[#b45309] rounded-full mt-2 p-2 text-white">
                 Click To chat
               </button>
-            </div> */}
+            </div>
           </div>
           <div className="">
             <div
@@ -250,28 +251,30 @@ export default function Home() {
                 alt="Description of the image"
               ></Image>
             </div>
-            {/* <div className="flex items-center justify-center text-2xl font-extrabold mt-2">
-              <button className="flex items-center justify-center text-2xl font-extrabold bg-[#4ade80] rounded-full mt-2 p-2 text-white">
+            <div className="flex items-center justify-center text-base font-extrabold mt-2">
+              <button className="flex items-center justify-center text-base font-extrabold bg-[#4ade80] rounded-full mt-2 p-2 text-white">
                 Click To chat
               </button>
-            </div> */}
-          </div>
-          <div className="">
-            <div
-              className={`Press_Start_2P bubble shadow mini bottom ${p2p.className} `}
-            >
-              <Typewriter
-                words={["Hello! I am Chandler"]}
-                loop={2}
-                // cursor
-                // cursorStyle=""
-                typeSpeed={80}
-                deleteSpeed={80}
-                delaySpeed={2500}
-                onLoopDone={handleDone}
-                onType={handleType}
-              />
             </div>
+          </div>
+        </div>
+        <div className="flex justify-center ">
+          <div
+            className={`Press_Start_2P bubble shadow  bottom ${p2p.className}`}
+          >
+            <Typewriter
+              words={["Hello! I am Chandler"]}
+              loop={2}
+              // cursor
+              // cursorStyle=""
+              typeSpeed={80}
+              deleteSpeed={80}
+              delaySpeed={2500}
+              onLoopDone={handleDone}
+              onType={handleType}
+            />
+          </div>
+          <div>
             <div className="bg-[#818cf8] w-[150px] h-[150px] rounded-full transition-transform transform hover:rotate-180 hover:scale-125">
               <Image
                 className="hover:-rotate-180"
@@ -279,11 +282,11 @@ export default function Home() {
                 alt="Description of the image"
               ></Image>
             </div>
-            {/* <div className="flex items-center justify-center text-2xl font-extrabold mt-2">
-              <button className="flex items-center justify-center text-2xl font-extrabold bg-[#818cf8] rounded-full mt-2 p-2 text-white">
+            <div className="flex items-center justify-center text-base font-extrabold mt-2">
+              <button className="flex items-center justify-center text-base font-extrabold bg-[#818cf8] rounded-full mt-2 p-2 text-white">
                 Click To chat
               </button>
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
