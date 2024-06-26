@@ -164,7 +164,7 @@ export default function Home() {
       </div>
       {/* body mobile */}
       <div className="md:hidden sm:flex flex-col w-[100%] items-center h-[100vh] justify-center">
-        <div className="flex flex-row items-center w-[100%] px-[3%]">
+        <div className="flex flex-row items-center justify-center w-[100%] px-[3%]">
           <div className="tilted-image-container-1">
             <Image
               src={sun}
