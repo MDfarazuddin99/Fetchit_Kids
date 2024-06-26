@@ -32,8 +32,8 @@ export default function Home() {
       className={`${nunito.className} SkyToNight flex flex-col items-center justify-between`}
     >
       {/* body Desktop*/}
-      <div className="hidden md:flex flex-col w-[100%] items-center justify-center h-[100vh] py-auto">
-        <div className="flex flex-row items-center w-[100%] justify-between px-[3%]">
+      <div className="hidden md:flex flex-col w-[100%] items-center justify-center h-[100vh]">
+        <div className="flex flex-row items-center w-[100%] justify-between px-[4%]">
           <div id="cloud"></div>
 
           <div className="tilted-image-container-1">
@@ -45,10 +45,12 @@ export default function Home() {
               className="tilted-image"
             />
           </div>
-          <div className="inline-block rounded-full text-white bg-[#818cf8] p-5">
-            <p className="font-extrabold text-3xl">
-              Learn Something New Everyday
-            </p>
+          <div className="flex-grow flex justify-center items-center">
+            <div className="inline-block rounded-full text-white bg-[#818cf8] p-3">
+              <p className="font-extrabold text-3xl">
+                Learn Something New Everyday
+              </p>
+            </div>
           </div>
           <div className="tilted-image-container-2">
             <Image
@@ -161,9 +163,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col w-[100%] items-center h-[100vh]">
-        <div className="flex flex-row items-center w-[100%] justify-between px-[3%]">
-
+      <div className="md:hidden sm:flex flex-col w-[100%] items-center h-[100vh] justify-center">
+        <div className="flex flex-row items-center w-[100%] px-[3%]">
           <div className="tilted-image-container-1">
             <Image
               src={sun}
@@ -185,6 +186,19 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Centered div */}
+        <div className="flex-col flex justify-center items-center">
+          <div className="inline-block rounded-full text-white bg-[#818cf8] p-3">
+            <p className="font-extrabold text-1xl">
+              Learn Something New Everyday
+            </p>
+          </div>
+          <div className="inline-block rounded-full text-white bg-[#4ade80] p-3 mt-[2%]">
+            <p className="font-extrabold text-1xl">
+              Meet your Guides
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* footer element */}
