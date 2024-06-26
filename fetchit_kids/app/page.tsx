@@ -31,8 +31,8 @@ export default function Home() {
     <main
       className={`${nunito.className} SkyToNight flex flex-col items-center justify-between`}
     >
-      {/* body */}
-      <div className="flex flex-col w-[100%] items-center justify-center h-[100vh] py-auto">
+      {/* body Desktop*/}
+      <div className="hidden md:flex flex-col w-[100%] items-center justify-center h-[100vh] py-auto">
         <div className="flex flex-row items-center w-[100%] justify-between px-[3%]">
           <div id="cloud"></div>
 
@@ -159,6 +159,32 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="flex flex-col w-[100%] items-center h-[100vh]">
+        <div className="flex flex-row items-center w-[100%] justify-between px-[3%]">
+
+          <div className="tilted-image-container-1">
+            <Image
+              src={sun}
+              alt="Tilted Star"
+              layout="fill"
+              objectFit="contain"
+              className="tilted-image"
+            />
+          </div>
+
+          <div className="tilted-image-container-2">
+            <Image
+              src={moon}
+              alt="Tilted Star"
+              layout="fill"
+              objectFit="contain"
+              className="tilted-image"
+            />
+          </div>
+        </div>
+
       </div>
 
       {/* footer element */}
