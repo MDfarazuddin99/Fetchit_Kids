@@ -65,6 +65,7 @@
   transform: rotate(1080deg);
 }
 
+/* Default styles for desktop and larger screens */
 .bubble {
   position: absolute;
   display: inline-block;
@@ -73,7 +74,6 @@
   z-index: 2;
   font-size: 12px;
   line-height: 1.3em;
-  /* letter-spacing: -0.04em; */
   background-color: var(--white);
   color: var(--black);
   padding: calc(3 * var(--px));
@@ -117,15 +117,18 @@
   /* font-size: 16px;  */
   padding: 4px;
 }
+
 .bubble.medium {
   width: 350px;
 }
+
 .bubble.large {
   width: 560px;
   font-size: 24px;
   text-align: left;
   text-transform: uppercase;
 }
+
 .bubble.grow {
   width: initial;
 }
@@ -201,6 +204,29 @@
     calc(-2 * var(--px)) calc(-1 * var(--px)) var(--black),
     calc(-1 * var(--px)) calc(-2 * var(--px)) var(--black),
     0 calc(-1 * var(--px)) var(--white);
+}
+
+/* Add media query for mobile devices */
+@media (max-width: 768px) {
+  .bubble {
+    font-size: 6px; /* Reduced font size */
+    padding: calc(1.5 * var(--px)); /* Reduced padding */
+    width: 100px; /* Reduced width */
+  }
+
+  .bubble.mini {
+    width: 55px; /* Reduced from 110px to 55px */
+    padding: 2px; /* Reduced padding */
+  }
+
+  .bubble.medium {
+    width: 175px; /* Reduced from 350px to 175px */
+  }
+
+  .bubble.large {
+    width: 280px; /* Reduced from 560px to 280px */
+    font-size: 12px; /* Reduced font size */
+  }
 }
 
 #cloud {

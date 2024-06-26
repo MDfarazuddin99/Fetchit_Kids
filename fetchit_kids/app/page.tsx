@@ -162,7 +162,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-
+      {/* body mobile */}
       <div className="md:hidden sm:flex flex-col w-[100%] items-center h-[100vh] justify-center">
         <div className="flex flex-row items-center w-[100%] px-[3%]">
           <div className="tilted-image-container-1">
@@ -194,9 +194,96 @@ export default function Home() {
             </p>
           </div>
           <div className="inline-block rounded-full text-white bg-[#4ade80] p-3 mt-[2%]">
-            <p className="font-extrabold text-1xl">
-              Meet your Guides
-            </p>
+            <p className="font-extrabold text-1xl">Meet your Guides</p>
+          </div>
+        </div>
+        <div className="flex flex-col justify-center items-center w-[100%] mb-[100px]">
+          <div className="">
+            <div
+              className={`Press_Start_2P bubble shadow mini bottom ${p2p.className}`}
+            >
+              <Typewriter
+                words={["Hello! I am Ross"]}
+                loop={2}
+                // cursor
+                // cursorStyle=""
+                typeSpeed={80}
+                deleteSpeed={80}
+                delaySpeed={2500}
+                onLoopDone={handleDone}
+                onType={handleType}
+              />
+            </div>
+            <div className=" bg-[#b45309] w-[150px] h-[150px] rounded-full transition-transform transform hover:rotate-180 hover:scale-125">
+              <Image
+                className="hover:-rotate-180"
+                src={avatar1}
+                alt="Description of the image"
+              ></Image>
+            </div>
+            {/* <div className="flex items-center justify-center text-1xl font-extrabold mt-2">
+              <button className="flex items-center justify-center text-1xl font-extrabold bg-[#b45309] rounded-full mt-2 p-2 text-white">
+                Click To chat
+              </button>
+            </div> */}
+          </div>
+          <div className="">
+            <div
+              className={`Press_Start_2P bubble shadow mini bottom ${p2p.className}`}
+            >
+              <Typewriter
+                words={["Hello! I am Joey"]}
+                loop={2}
+                // cursor
+                // cursorStyle=""
+                typeSpeed={80}
+                deleteSpeed={80}
+                delaySpeed={2500}
+                onLoopDone={handleDone}
+                onType={handleType}
+              />
+            </div>
+            <div className="flex bg-[#4ade80] w-[150px] h-[150px] rounded-full transition-transform transform hover:rotate-180 hover:scale-125">
+              <Image
+                className="hover:-rotate-180"
+                src={avatar2}
+                alt="Description of the image"
+              ></Image>
+            </div>
+            {/* <div className="flex items-center justify-center text-2xl font-extrabold mt-2">
+              <button className="flex items-center justify-center text-2xl font-extrabold bg-[#4ade80] rounded-full mt-2 p-2 text-white">
+                Click To chat
+              </button>
+            </div> */}
+          </div>
+          <div className="">
+            <div
+              className={`Press_Start_2P bubble shadow mini bottom ${p2p.className} `}
+            >
+              <Typewriter
+                words={["Hello! I am Chandler"]}
+                loop={2}
+                // cursor
+                // cursorStyle=""
+                typeSpeed={80}
+                deleteSpeed={80}
+                delaySpeed={2500}
+                onLoopDone={handleDone}
+                onType={handleType}
+              />
+            </div>
+            <div className="bg-[#818cf8] w-[150px] h-[150px] rounded-full transition-transform transform hover:rotate-180 hover:scale-125">
+              <Image
+                className="hover:-rotate-180"
+                src={avatar3}
+                alt="Description of the image"
+              ></Image>
+            </div>
+            {/* <div className="flex items-center justify-center text-2xl font-extrabold mt-2">
+              <button className="flex items-center justify-center text-2xl font-extrabold bg-[#818cf8] rounded-full mt-2 p-2 text-white">
+                Click To chat
+              </button>
+            </div> */}
           </div>
         </div>
       </div>
