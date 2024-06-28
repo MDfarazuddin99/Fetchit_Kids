@@ -1,5 +1,5 @@
 import { createOpenAI } from "@ai-sdk/openai";
-import { streamText } from "ai";
+import { streamText, generateText } from "ai";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -9,9 +9,9 @@ const openai = createOpenAI({ apiKey: process.env.OPENAI_API_KEY });
 export const maxDuration = 30;
 
 export async function POST(req: Request) {
-  const { messages } = await req.json();
-
-  const result = await streamText({
+  const requestData = await req.json();
+  console.log("image Url: " + requestData.imageUrl)
+  const result = await generateText({
     model: openai("gpt-4-turbo"),
     system:
       `You are a Math Tutor who helps students understand question and don't reveal the answer to them` +
@@ -25,12 +25,13 @@ export async function POST(req: Request) {
             {
               type: 'image',
               image:
-                'https://github.com/vercel/ai/blob/main/examples/ai-core/data/comic-cat.png?raw=true',
+                requestData.imageUrl,
             },
           ],
         },
       ],
   });
-
-  return result.toAIStreamResponse();
+  console.log(result)
+  return Response.json({"message"  : result.text});
+  // return Response.json({ "message: ": "Post data" });
 }

@@ -1,35 +1,93 @@
-"use client";
+// "use client";
+import Image from "next/image";
 import { Link, CloudUpload } from "lucide-react";
 import { useChat } from "ai/react";
+import React, { useState } from "react";
 
 export default function ChatInputForm() {
-  const { messages, input, handleInputChange, handleSubmit } = useChat();
+  //   const { messages, input, handleInputChange, handleSubmit } = useChat();
+  const [imageUrl, setImageUrl] = useState("");
+  const [submittedUrl, setSubmittedUrl] = useState("");
+  const [imageDesc, setImageDesc] = useState("");
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    try {
+      // Perform your POST request with the imageUrl
+      const response = await fetch("api/chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ imageUrl }),
+      });
+
+      if (response.ok) {
+        // Assuming response contains image data or confirmation
+        const data = await response.json();
+        console.log("data: " + data.message);
+        setImageDesc(data.message);
+        setSubmittedUrl(imageUrl); // Store the submitted URL to display
+      } else {
+        console.error("Failed to submit image URL");
+      }
+    } catch (error) {
+      console.error("Error submitting image URL:", error);
+    }
+  };
+
   return (
-    <div className="w-[60%] h-[500px] bg-ross rounded mt-[10px] p-[5%]">
-      {/* <form onSubmit={handleSubmit}>
-        <label className="mb-2 text-sm font-medium text-gray-900 sr-only">
-          Search
-        </label>
-        <div className="relative">
-          <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-            <Link size={20} className="shrink text-white w-6 h-6" />
+    <div className="flex flex-col items-center min-w-[60%] h-[1000px] bg-ross rounded mt-[10px] p-[1%]">
+      {/* Display submitted image if available */}
+      <div className="flex flex-col items-center w-[100%]">
+        {submittedUrl && (
+          <div className="mt-4">
+            <h2 className="text-lg font-medium text-gray-900 mb-2">
+              Submitted Image:
+            </h2>
+            <Image
+              src={submittedUrl}
+              objectFit="contain"
+              alt="image to be uploaded"
+              width={200}
+              height={200}
+            />{" "}
           </div>
-          <input
-            className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-ross-light"
-            placeholder="Enter Image URL"
-            value={input}
-            onChange={handleInputChange}
-            required
-          />
-          <button
-            type="submit"
-            className="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2"
-          >
-            Submit
-          </button>
+        )}
+        <form onSubmit={handleSubmit} className="w-full">
+          <label className="mb-2 text-sm font-medium sr-only">Search</label>
+          <div className="relative w-full">
+            <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+              {/* Replace with your icon or component */}
+              <Link className="w-6 h-6 "></Link>
+            </div>
+            <input
+              className="block w-full p-4 pl-10 text-sm  border rounded-lg bg-ross-light"
+              placeholder="Enter Image URL"
+              value={imageUrl}
+              onChange={(e) => setImageUrl(e.target.value)}
+              required
+            />
+            <button
+              type="submit"
+              className="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+        <div className="w-full bg-white">
+          Image Description:{" "}
+          {imageDesc && (
+            <div className="mt-4">
+              <h2 className="text-lg font-medium text-gray-900 mb-2">
+                {imageDesc}
+              </h2>{" "}
+            </div>
+          )}
         </div>
-      </form> */}
-    <div className="flex flex-col w-full max-w-md mx-auto stretch">
+      </div>
+      {/* <div className="flex flex-col w-full max-w-md mx-auto stretch">
       {messages.map(m => (
         <div key={m.id} className="whitespace-pre-wrap">
           {m.role === 'user' ? 'User: ' : 'AI: '}
@@ -45,7 +103,7 @@ export default function ChatInputForm() {
           onChange={handleInputChange}
         />
       </form>
-    </div>
+    </div> */}
       <div className="flex items-center justify-center w-full mt-5 ">
         <label className="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-ross-light">
           <div className="flex flex-col items-center justify-center pt-5 pb-6">
