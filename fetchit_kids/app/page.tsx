@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { useRouter } from 'next/navigation'
 import { Nunito, Press_Start_2P } from "next/font/google";
 import avatar1 from "../public/av1.png";
 import avatar2 from "../public/av2.png";
@@ -19,6 +20,12 @@ const p2p = Press_Start_2P({
 });
 
 export default function Home() {
+  const router = useRouter();
+  
+  const handleButtonClick = (route : string) => {
+    router.push(route);
+  };
+
   const handleType = (count: number) => {
     // access word count number
     console.log(count);
@@ -27,6 +34,7 @@ export default function Home() {
   const handleDone = () => {
     console.log(`Done after 5 loops!`);
   };
+
   return (
     <main
       className={`${nunito.className} SkyToNight flex flex-col items-center justify-between`}
@@ -97,7 +105,7 @@ export default function Home() {
               ></Image>
             </div>
             <div className="flex items-center justify-center text-2xl font-extrabold mt-2">
-              <button className="flex items-center justify-center text-2xl font-extrabold bg-[#b45309] rounded-full mt-2 p-2 text-white">
+              <button onClick={() => handleButtonClick('/chat_ross')} className="flex items-center justify-center text-2xl font-extrabold bg-[#b45309] rounded-full mt-2 p-2 text-white">
                 Click To chat
               </button>
             </div>
@@ -126,7 +134,7 @@ export default function Home() {
               ></Image>
             </div>
             <div className="flex items-center justify-center text-2xl font-extrabold mt-2">
-              <button className="flex items-center justify-center text-2xl font-extrabold bg-[#4ade80] rounded-full mt-2 p-2 text-white">
+              <button onClick={() => handleButtonClick('/chat_joey')} className="flex items-center justify-center text-2xl font-extrabold bg-[#4ade80] rounded-full mt-2 p-2 text-white">
                 Click To chat
               </button>
             </div>
@@ -155,7 +163,7 @@ export default function Home() {
               ></Image>
             </div>
             <div className="flex items-center justify-center text-2xl font-extrabold mt-2">
-              <button className="flex items-center justify-center text-2xl font-extrabold bg-[#818cf8] rounded-full mt-2 p-2 text-white">
+              <button onClick={() => handleButtonClick('/chat_chandler')} className="flex items-center justify-center text-2xl font-extrabold bg-[#818cf8] rounded-full mt-2 p-2 text-white">
                 Click To chat
               </button>
             </div>
@@ -222,7 +230,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex items-center justify-center text-base font-extrabold mt-2">
-          <button className="flex items-center justify-center text-base font-extrabold bg-[#4ade80] rounded-full mt-2 p-2 text-white">
+          <button onClick={() => handleButtonClick('/chat_ross')} className="flex items-center justify-center text-base font-extrabold bg-[#4ade80] rounded-full mt-2 p-2 text-white">
             Click To chat
           </button>
         </div>
@@ -252,7 +260,7 @@ export default function Home() {
               ></Image>
             </div>
             <div className="flex items-center justify-center text-base font-extrabold mt-2">
-              <button className="flex items-center justify-center text-base font-extrabold bg-[#b45309] rounded-full mt-2 p-2 text-white">
+              <button onClick={() => handleButtonClick('/chat_joey')} className="flex items-center justify-center text-base font-extrabold bg-[#b45309] rounded-full mt-2 p-2 text-white">
                 Click To chat
               </button>
             </div>
@@ -282,7 +290,7 @@ export default function Home() {
                 ></Image>
               </div>
               <div className="flex items-center justify-center text-base font-extrabold mt-2">
-                <button className="flex items-center justify-center text-base font-extrabold bg-[#818cf8] rounded-full mt-2 p-2 text-white">
+                <button onClick={() => handleButtonClick('/chat_chandler')} className="flex items-center justify-center text-base font-extrabold bg-[#818cf8] rounded-full mt-2 p-2 text-white">
                   Click To chat
                 </button>
               </div>

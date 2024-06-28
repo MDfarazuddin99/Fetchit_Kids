@@ -8,8 +8,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-      },
+      colors:{
+        ross:{
+          DEFAULT: '#b45309',
+          light: '#ebb186',
+
+        }
+      }
     },
   },
   plugins: [],
