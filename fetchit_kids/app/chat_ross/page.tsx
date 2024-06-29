@@ -29,7 +29,7 @@ export default function Home() {
       className={`${nunito.className} SkyToNight flex flex-col items-center justify-between`}
     >
       {/* body Desktop*/}
-      <div className="hidden md:flex flex-col w-[100%] items-center h-[100vh] mt-[2%]">
+      <div className="hidden md:flex flex-col w-[100%] items-center  m-[2%]">
         <div className="">
           <div
             className={`Press_Start_2P bubble shadow mini bottom ${p2p.className}`}
@@ -54,8 +54,9 @@ export default function Home() {
             ></Image>
           </div>
         </div>
-        <ChatInputForm/>
+        <ChatInputForm />
       </div>
+
       {/* body mobile */}
       <div className="md:hidden sm:flex flex-col w-[100%] items-center h-[100vh] justify-center"></div>
 

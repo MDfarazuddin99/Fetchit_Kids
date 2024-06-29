@@ -37,12 +37,12 @@ export default function ChatInputForm() {
   };
 
   return (
-    <div className="flex flex-col items-center min-w-[60%] h-[1000px] bg-ross rounded mt-[10px] p-[1%]">
+    <div className="flex flex-col items-center w-[60%] rounded m-[5px] p-[3%]">
       {/* Display submitted image if available */}
       <div className="flex flex-col items-center w-[100%]">
         {submittedUrl && (
-          <div className="mt-4">
-            <h2 className="text-lg font-medium text-gray-900 mb-2">
+          <div className=" flex flex-col items-center">
+            <h2 className="text-lg font-medium text-gray-900 mb-2 text-1xl text-white">
               Submitted Image:
             </h2>
             <Image
@@ -54,71 +54,66 @@ export default function ChatInputForm() {
             />{" "}
           </div>
         )}
-        <form onSubmit={handleSubmit} className="w-full">
-          <label className="mb-2 text-sm font-medium sr-only">Search</label>
-          <div className="relative w-full">
-            <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-              {/* Replace with your icon or component */}
-              <Link className="w-6 h-6 "></Link>
+        {!imageDesc ? (
+          <form onSubmit={handleSubmit} className="w-full">
+            <label className="mb-2 text-sm font-medium sr-only">Search</label>
+            <div className="relative w-full">
+              <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                {/* Replace with your icon or component */}
+                <Link className="w-6 h-6 "></Link>
+              </div>
+              <input
+                className="block w-full p-4 pl-10 text-sm  border rounded-lg c-light"
+                placeholder="Enter Image URL"
+                value={imageUrl}
+                onChange={(e) => setImageUrl(e.target.value)}
+                required
+              />
+              <button
+                type="submit"
+                className="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2"
+              >
+                Submit
+              </button>
             </div>
-            <input
-              className="block w-full p-4 pl-10 text-sm  border rounded-lg bg-ross-light"
-              placeholder="Enter Image URL"
-              value={imageUrl}
-              onChange={(e) => setImageUrl(e.target.value)}
-              required
-            />
-            <button
-              type="submit"
-              className="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-4 py-2"
-            >
-              Submit
-            </button>
-          </div>
-        </form>
-        <div className="w-full bg-white">
+          </form>
+        ) : (
+          ""
+        )}
+        <div className="w-full bg-white mt-2">
           Image Description:{" "}
-          {imageDesc && (
+          {imageDesc ? (
             <div className="mt-4">
               <h2 className="text-lg font-medium text-gray-900 mb-2">
                 {imageDesc}
-              </h2>{" "}
+              </h2>
+              {<div>Please upload Image</div>}
             </div>
+          ) : (
+            <div>Upload Image to get description</div>
           )}
         </div>
       </div>
-      {/* <div className="flex flex-col w-full max-w-md mx-auto stretch">
-      {messages.map(m => (
-        <div key={m.id} className="whitespace-pre-wrap">
-          {m.role === 'user' ? 'User: ' : 'AI: '}
-          {m.content}
-        </div>
-      ))}
 
-      <form onSubmit={handleSubmit}>
-        <input
-          className="w-full max-w-md p-2 border border-gray-300 rounded shadow-xl"
-          value={input}
-          placeholder="Say something..."
-          onChange={handleInputChange}
-        />
-      </form>
-    </div> */}
-      <div className="flex items-center justify-center w-full mt-5 ">
-        <label className="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-ross-light">
-          <div className="flex flex-col items-center justify-center pt-5 pb-6">
-            <CloudUpload size={40} className="shrink text-white w-12 h-12" />
-            <p className="mb-2 text-sm text-gray-900">
-              <span className="font-semibold">Click to upload</span> or drag and
-              drop
-            </p>
-            <p className="text-xs text-gray-900">
-              SVG, PNG, JPG or GIF (MAX. 800x400px)
-            </p>
-          </div>
-          <input id="dropzone-file" type="file" className="hidden" />
-        </label>
-      </div>
+      {!imageDesc ? (
+        <div className="flex items-center justify-center w-full mt-5 ">
+          <label className="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-500">
+            <div className="flex flex-col items-center justify-center pt-5 pb-6">
+              <CloudUpload size={40} className="shrink text-white w-12 h-12" />
+              <p className="mb-2 text-sm text-gray-900">
+                <span className="font-semibold">Click to upload</span> or drag
+                and drop
+              </p>
+              <p className="text-xs text-gray-900">
+                SVG, PNG, JPG or GIF (MAX. 800x400px)
+              </p>
+            </div>
+            <input id="dropzone-file" type="file" className="hidden" />
+          </label>
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 }
