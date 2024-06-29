@@ -54,7 +54,7 @@ export default function Home() {
             />
           </div>
           <div className="flex-grow flex justify-center items-center">
-            <div className="inline-block rounded-full text-white bg-[#818cf8] p-3">
+            <div className="inline-block rounded-full text-white bg-chandler p-3">
               <p className="font-extrabold text-3xl">
                 Learn Something New Everyday
               </p>
@@ -97,7 +97,7 @@ export default function Home() {
                 onType={handleType}
               />
             </div>
-            <div className=" bg-[#b45309] w-[300px] h-[300px] rounded-full transition-transform transform hover:rotate-180 hover:scale-125">
+            <div className=" bg-ross w-[300px] h-[300px] rounded-full transition-transform transform hover:rotate-180 hover:scale-125">
               <Image
                 className="hover:-rotate-180"
                 src={avatar1}
@@ -105,7 +105,7 @@ export default function Home() {
               ></Image>
             </div>
             <div className="flex items-center justify-center text-2xl font-extrabold mt-2">
-              <button onClick={() => handleButtonClick('/chat_ross')} className="flex items-center justify-center text-2xl font-extrabold bg-[#b45309] rounded-full mt-2 p-2 text-white">
+              <button onClick={() => handleButtonClick('/chat_ross')} className="flex items-center justify-center text-2xl font-extrabold bg-ross rounded-full mt-2 p-2 text-white">
                 Click To chat
               </button>
             </div>
@@ -155,7 +155,7 @@ export default function Home() {
                 onType={handleType}
               />
             </div>
-            <div className="bg-[#818cf8] w-[300px] h-[300px] rounded-full transition-transform transform hover:rotate-180 hover:scale-125">
+            <div className="bg-chandler w-[300px] h-[300px] rounded-full transition-transform transform hover:rotate-180 hover:scale-125">
               <Image
                 className="hover:-rotate-180"
                 src={avatar3}
@@ -163,7 +163,7 @@ export default function Home() {
               ></Image>
             </div>
             <div className="flex items-center justify-center text-2xl font-extrabold mt-2">
-              <button onClick={() => handleButtonClick('/chat_chandler')} className="flex items-center justify-center text-2xl font-extrabold bg-[#818cf8] rounded-full mt-2 p-2 text-white">
+              <button onClick={() => handleButtonClick('/chat_chandler')} className="flex items-center justify-center text-2xl font-extrabold bg-chandler rounded-full mt-2 p-2 text-white">
                 Click To chat
               </button>
             </div>
@@ -196,7 +196,7 @@ export default function Home() {
 
         {/* Centered div */}
         <div className="flex-col flex justify-center items-center">
-          <div className="inline-block rounded-full text-white bg-[#818cf8] p-3">
+          <div className="inline-block rounded-full text-white bg-chandler p-3">
             <p className="font-extrabold text-1xl">
               Learn Something New Everyday
             </p>
@@ -252,7 +252,7 @@ export default function Home() {
               />
             </div>
 
-            <div className=" bg-[#b45309] w-[150px] h-[150px] rounded-full transition-transform transform hover:rotate-180 hover:scale-125">
+            <div className=" bg-ross w-[150px] h-[150px] rounded-full transition-transform transform hover:rotate-180 hover:scale-125">
               <Image
                 className="hover:-rotate-180"
                 src={avatar1}
@@ -260,7 +260,7 @@ export default function Home() {
               ></Image>
             </div>
             <div className="flex items-center justify-center text-base font-extrabold mt-2">
-              <button onClick={() => handleButtonClick('/chat_joey')} className="flex items-center justify-center text-base font-extrabold bg-[#b45309] rounded-full mt-2 p-2 text-white">
+              <button onClick={() => handleButtonClick('/chat_joey')} className="flex items-center justify-center text-base font-extrabold bg-ross rounded-full mt-2 p-2 text-white">
                 Click To chat
               </button>
             </div>
@@ -282,7 +282,7 @@ export default function Home() {
               />
             </div>
             <div>
-              <div className="bg-[#818cf8] w-[150px] h-[150px] rounded-full transition-transform transform hover:rotate-180 hover:scale-125">
+              <div className="bg-chandler w-[150px] h-[150px] rounded-full transition-transform transform hover:rotate-180 hover:scale-125">
                 <Image
                   className="hover:-rotate-180"
                   src={avatar3}
@@ -290,7 +290,7 @@ export default function Home() {
                 ></Image>
               </div>
               <div className="flex items-center justify-center text-base font-extrabold mt-2">
-                <button onClick={() => handleButtonClick('/chat_chandler')} className="flex items-center justify-center text-base font-extrabold bg-[#818cf8] rounded-full mt-2 p-2 text-white">
+                <button onClick={() => handleButtonClick('/chat_chandler')} className="flex items-center justify-center text-base font-extrabold bg-chandler rounded-full mt-2 p-2 text-white">
                   Click To chat
                 </button>
               </div>

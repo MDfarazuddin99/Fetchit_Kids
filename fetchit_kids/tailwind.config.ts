@@ -12,8 +12,14 @@ const config: Config = {
         ross:{
           DEFAULT: '#b45309',
           light: '#ebb186',
-
-        }
+        },
+        joey:{
+          DEFAULT: '#4ade80',
+          light: '#ebb186',
+        },
+        chandler: {
+          DEFAULT: '#818cf8'
+        }        
       }
     },
   },

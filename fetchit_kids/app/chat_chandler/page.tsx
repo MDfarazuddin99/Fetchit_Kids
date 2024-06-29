@@ -2,6 +2,9 @@
 import Image from "next/image";
 import { Nunito, Press_Start_2P } from "next/font/google";
 import fetchit_logo from "../../public/fetchit.png";
+import { Typewriter } from "nextjs-simple-typewriter";
+import avatar3 from "../../public/av3.png";
+import ChatInputForm from "../components/chat/ChatInputForm";
 const nunito = Nunito({
   weight: "400",
   subsets: ["latin"],
@@ -26,13 +29,36 @@ export default function Home() {
       className={`${nunito.className} SkyToNight flex flex-col items-center justify-between`}
     >
       {/* body Desktop*/}
-      <div className="hidden md:flex flex-col w-[100%] items-center justify-center h-[100vh]">
-
+      <div className="hidden md:flex flex-col w-[100%] items-center  m-[2%]">
+        <div className="">
+          <div
+            className={`Press_Start_2P bubble shadow mini bottom ${p2p.className}`}
+          >
+            <Typewriter
+              words={["Hello! I am chandler"]}
+              loop={2}
+              // cursor
+              // cursorStyle=""
+              typeSpeed={80}
+              deleteSpeed={80}
+              delaySpeed={2500}
+              onLoopDone={handleDone}
+              onType={handleType}
+            />
+          </div>
+          <div className=" bg-chandler w-[300px] h-[300px] rounded-full transition-transform transform hover:rotate-180 hover:scale-125">
+            <Image
+              className="hover:-rotate-180"
+              src={avatar3}
+              alt="Description of the image"
+            ></Image>
+          </div>
+        </div>
+        <ChatInputForm />
       </div>
+
       {/* body mobile */}
-      <div className="md:hidden sm:flex flex-col w-[100%] items-center h-[100vh] justify-center">
-
-      </div>
+      <div className="md:hidden sm:flex flex-col w-[100%] items-center h-[100vh] justify-center"></div>
 
       {/* footer element */}
       <footer className="bg-[white] w-[100%]">

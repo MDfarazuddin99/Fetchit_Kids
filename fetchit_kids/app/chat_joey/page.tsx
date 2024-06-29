@@ -3,8 +3,8 @@ import Image from "next/image";
 import { Nunito, Press_Start_2P } from "next/font/google";
 import fetchit_logo from "../../public/fetchit.png";
 import { Typewriter } from "nextjs-simple-typewriter";
-import avatar1 from "../../public/av1.png";
-import ChatInputForm from "../components/chat_ross/ChatInputForm";
+import avatar1 from "../../public/av2.png";
+import ChatInputForm from "../components/chat/ChatInputForm";
 const nunito = Nunito({
   weight: "400",
   subsets: ["latin"],
@@ -35,7 +35,7 @@ export default function Home() {
             className={`Press_Start_2P bubble shadow mini bottom ${p2p.className}`}
           >
             <Typewriter
-              words={["Hello! I am Ross"]}
+              words={["Hello! I am joey"]}
               loop={2}
               // cursor
               // cursorStyle=""
@@ -46,7 +46,7 @@ export default function Home() {
               onType={handleType}
             />
           </div>
-          <div className=" bg-ross w-[300px] h-[300px] rounded-full transition-transform transform hover:rotate-180 hover:scale-125">
+          <div className=" bg-joey w-[300px] h-[300px] rounded-full transition-transform transform hover:rotate-180 hover:scale-125">
             <Image
               className="hover:-rotate-180"
               src={avatar1}
