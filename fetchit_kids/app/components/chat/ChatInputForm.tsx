@@ -3,6 +3,8 @@ import Image from "next/image";
 import { Link, CloudUpload } from "lucide-react";
 import { useChat } from "ai/react";
 import React, { useState } from "react";
+import "katex/dist/katex.min.css";
+import Latex from "react-latex-next";
 
 export default function ChatInputForm() {
   //   const { messages, input, handleInputChange, handleSubmit } = useChat();
@@ -80,12 +82,12 @@ export default function ChatInputForm() {
         ) : (
           ""
         )}
-        <div className={`w-full bg-white mt-2 ` + (!imageDesc? "hidden" :"")}>
+        <div className={`w-full bg-white mt-2 ` + (!imageDesc ? "hidden" : "")}>
           Image Description:{" "}
           {imageDesc ? (
             <div className="mt-4">
               <h2 className="text-lg font-medium text-gray-900 mb-2">
-                {imageDesc}
+                <Latex>{imageDesc}</Latex>
               </h2>
               {<div>Please upload Image</div>}
             </div>
