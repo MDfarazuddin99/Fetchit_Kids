@@ -80,7 +80,7 @@ export default function ChatInputForm() {
         ) : (
           ""
         )}
-        <div className="w-full bg-white mt-2">
+        <div className={`w-full bg-white mt-2 ` + (!imageDesc? "hidden" :"")}>
           Image Description:{" "}
           {imageDesc ? (
             <div className="mt-4">
